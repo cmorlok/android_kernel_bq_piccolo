@@ -69,6 +69,7 @@ void kgsl_pwrscale_wake(struct kgsl_device *device)
 	/* clear old stats before waking */
 	memset(&psc->accum_stats, 0, sizeof(psc->accum_stats));
 	memset(&last_xstats, 0, sizeof(last_xstats));
+	memset(&last_xstats, 0, sizeof(last_xstats));
 
 	/* and any hw activity from waking up*/
 	device->ftbl->power_stats(device, &stats);
