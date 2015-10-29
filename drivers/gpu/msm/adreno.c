@@ -1345,6 +1345,9 @@ int adreno_reset(struct kgsl_device *device)
 	/* clear pending vbif transactions before reset */
 	adreno_vbif_clear_pending_transactions(device);
 
+	/* clear pending vbif transactions before reset */
+	adreno_vbif_clear_pending_transactions(device);
+
 	/*
 	 * Try soft reset first, for non mmu fault case only.
 	 * Skip soft reset and use hard reset for A304 GPU, As
