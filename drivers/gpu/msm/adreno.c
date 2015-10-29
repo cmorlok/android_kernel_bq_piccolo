@@ -1228,6 +1228,10 @@ error_rail_off:
 		pm_qos_update_request(&device->pwrctrl.pm_qos_req_dma,
 				pmqos_active_vote);
 
+	if (pmqos_active_vote != pmqos_wakeup_vote)
+		pm_qos_update_request(&device->pwrctrl.pm_qos_req_dma,
+				pmqos_active_vote);
+
 	return status;
 }
 
